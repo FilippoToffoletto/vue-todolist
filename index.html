@@ -25,13 +25,16 @@
             </div>
         </header>
         <nav class="container">
-            <input type="text" placeholder="Inserisci un promemoria">
-            <button>Add Task</button>
+            <input 
+            @keyup.enter="createTask()"
+            v-model.trim="newMessageString"
+            type="text" placeholder="Inserisci un promemoria">
+            <button @click="createTask()">Add Task</button>
             <span class="error d-block my-3">{{errorString}}</span>
         </nav>
         <main>
             <div class="container">
-                <ul class="px-5">
+                <ul class="px-5" v-if="tasks.length > 0">
                     <li 
                     v-for="(task, index) in tasks"
                     :class="{'done': task.done}"
@@ -43,7 +46,7 @@
                          class="fa-solid fa-circle-xmark"></i>
                     </li>
                 </ul>
-                <!-- <h3>Non ci sono promemoria &#128285;</h3> -->
+                <h3 v-else>Non ci sono promemoria nella tua lista &#128285;</h3>
             </div>
         </main>
     </div>
