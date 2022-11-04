@@ -25,7 +25,30 @@ header, nav{
 }
 
 /* NAV */
-nav{
+nav input{
+    margin: 0px 10px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 20px -10px;
+    padding: 5px 10px;
+}
+
+nav button{
+    margin: 0px 10px;
+    border-radius: 20px;
+    background-color: #457b9d;
+    color: white;
+    width: 100px;
+    border: none;
+    padding: 10px auto;   
+    border: 4px solid #82b4d300;
+}
+nav button:hover{
+    border: 4px solid #8ec8eb;
+}
+
+.error{
+    color: red;
 }
 
 
@@ -34,35 +57,33 @@ main .container{
     width: 60%;
 }
 main .container ul{
-    padding: 0px 20px;
-    background-color: aquamarine;
+    padding: 20px 20px;
+    background-color: #a8dadc;
     border-radius: 20px;
 }
 
 
 main .container li{
-    background-color: #457b9d70;
-    border-bottom: 1px solid #457b9d70;
-    padding: 5px 20px;
+    /* border-bottom: 1px solid #457b9d70; */
+    padding: 10px 20px;
     font-size: 1.1rem;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 .task{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+main .container li:hover{
+    background-color: #82b4d3;
+}
 .task.done span{
     text-decoration: line-through;
     color: red;
 }
 
-main .container li:hover{
-    background-color: #a8dadc;
-    border-radius: 20px;
-}
 main .container li span:hover{
     color: #457b9d;
 }
