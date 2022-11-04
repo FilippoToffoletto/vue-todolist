@@ -10,6 +10,14 @@ createApp({
                     text:'Prendere il pane',
                     done: false
                 },
+                {
+                    text:'Prendere il latte',
+                    done: false
+                },
+                {
+                    text:'Portare fuori il cane',
+                    done: true
+                }
             ]
         }
     },
@@ -22,9 +30,12 @@ createApp({
             }
         },
         createTask(){
+            this.tasks.text='';
             this.errorString='';
-            if(this.newMessageString.length <5){
-                this.errorString = 'Attenzione il promemoria deve avere una lunghezza minima di 5 caratteri';
+            if(this.newMessageString.length < 5){
+                this.errorString = 'Attenzione il promemoria deve avere una lunghezza minima di 5 caratteri o già presente';
+            // }else if(this.newMessageString == this.tasks){
+            //     this.errorString = 'il promemoria è già presente';
             }else{
                 const newTask={
                     text: this.newMessageString,

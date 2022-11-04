@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="ft-container text-center" id="app">
-        <header class="container">
+        <header class="container ">
             <div class="logo">
                 <img src="img/logo.png" alt="Boolean">
             </div>
@@ -38,7 +38,7 @@
                     <li 
                     v-for="(task, index) in tasks"
                     :class="{'done': task.done}"
-                    @click="task.done  = !task.done"
+                    @click="task.done = !task.done"
                     class="task">
                         <span>{{task.text}}</span>
                         <i 
