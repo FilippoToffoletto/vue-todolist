@@ -1,0 +1,72 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:#f1faee ;
+}
+/* UTILITIES */
+
+img{
+    width: 100%;
+}
+
+/* CONTAINER */
+
+.ft-container{
+    height: 100vh;
+    margin: 30px 0;
+}
+
+.container img{
+    width: 60%;
+}
+
+/* HEADER */
+header, nav{
+    margin-bottom: 30px;
+}
+
+/* NAV */
+nav{
+}
+
+
+/* MAIN */
+main .container{
+    width: 60%;
+}
+main .container ul{
+    padding: 0px 20px;
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+
+
+main .container li{
+    background-color: #457b9d70;
+    border-bottom: 1px solid #457b9d70;
+    padding: 5px 20px;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task.done span{
+    text-decoration: line-through;
+    color: red;
+}
+
+main .container li:hover{
+    background-color: #a8dadc;
+    border-radius: 20px;
+}
+main .container li span:hover{
+    color: #457b9d;
+}
+
+main .container ul i:hover{
+    color:#07a97e;
+}
